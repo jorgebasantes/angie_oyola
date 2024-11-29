@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Gallery Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Login Form -->
+    <div id="login-container">
+        <h2>Login to Access Content</h2>
+        <form id="login-form" onsubmit="return handleLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+            <p id="login-error" >Invalid username or password</p>
+        </form>
+    </div>
+
+    <!-- Main Content Menu (Hidden until login) -->
+    <div id="main-content" >
+        <header>
+            <h1>Welcome Peru Gallery</h1>
+            <!-- Options Menu -->
+            <div class="menu">
+                <button onclick="showSection('images')">Images</button>
+                <button onclick="showSection('videos')">Videos</button>
+                <button onclick="showSection('pdfs')">PDFs</button>
+            </div>
+        </header>
+
+        <!-- Image Gallery Section -->
+        <section id="images-section" class="content-section" >
+            <h2>Image Gallery</h2>
+            <div class="grid-container">
+                <!-- Images will load dynamically in script.js -->
+            </div>
+        </section>
+
+        <!-- Video Gallery Section -->
+        <section id="videos-section" class="content-section" >
+            <h2>Video Gallery</h2>
+            <div class="video-container">
+                <!-- Video URLs should be added dynamically or directly in HTML as <video> tags -->
+            </div>
+        </section>
+
+        <!-- PDF Gallery Section -->
+        <section id="pdfs-section" class="content-section" >
+            <h2>PDF Documents</h2>
+            <div class="pdf-container">
+                <!-- Links to PDF files -->
+                
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
